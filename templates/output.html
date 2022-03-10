@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Result{% endblock %}
+
+{% block content %}
+<p>Files Uploaded Successfully</p>
+<ol>
+    {% for val in dic.values() %}
+    <li>
+        <a href="/readfile/{{val}}">{{ val }}</a>
+    </li>
+    {% endfor %}
+</ol>
+
+{% endblock %}
